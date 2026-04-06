@@ -37,7 +37,6 @@ app.get('/',(req,res)=>
     res.send('API Working')
 })
 
-app.listen(port,()=>
-{
-    console.log(`Server Started at ${port}`);
-})
+app.listen(process.env.PORT || 5000, () => {
+    console.log('Server started');
+});
