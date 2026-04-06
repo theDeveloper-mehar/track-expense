@@ -31,9 +31,9 @@ const Login = ({ onLogin }) => {
         try{
             if(token)
             {
-                storage.setItem('token',token);
+                localStorage.setItem('token',token);
             }
-            if(profile) storage.setItem('user',JSON.stringify(profile))
+            if(profile) localStorage.setItem('user',JSON.stringify(profile))
         }
         catch(err)
         {
