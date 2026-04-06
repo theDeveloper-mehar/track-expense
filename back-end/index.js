@@ -9,13 +9,12 @@ import dashboardRouter from './routes/dashboardRoute.js';
 
 
 const app = express();
-const port = 4000;
+const port = 5000;
 
 //Middlewares
 // app.use(cors());
 app.use(cors({
-  origin: "https://brilliant-buttercream-33daa4.netlify.app",
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: true,
   credentials: true
 }));
 app.use(express.json())

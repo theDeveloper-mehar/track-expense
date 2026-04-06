@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
 
-const JWT_SECRET = 'koushikmehar';
+const JWT_SECRET = process.env.JWT_SECRET;
 const TOKEN_EXPIRES = '24h';
 
 
