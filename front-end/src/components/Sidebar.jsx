@@ -222,10 +222,16 @@ const handleLogout =()=>
                   </ul>
                     </div>
                     <div className={sidebarStyles.mobileFooter}>
-                        <Link onClick={()=>setMobileOpen(false)}  to="https://mehars-portfolio.netlify.app/" className={sidebarStyles.mobileFooterLink}>
-                                <HelpCircle size={20} className='text-gray-500'/>
-                                <span>Support</span>
-                        </Link>
+                        <button
+  onClick={() => {
+    window.open("https://mehars-portfolio.netlify.app/", "_blank");
+    setMobileOpen(false);
+  }}
+  className={sidebarStyles.mobileFooterLink}
+>
+  <HelpCircle size={20} className='text-gray-500'/>
+  <span>Support</span>
+</button>
                         <button onClick={handleLogout} className={sidebarStyles.mobileLogoutButton}>
                             <LogOut size={20} className='text-gray-500'/>
                             <span>Logout</span>
