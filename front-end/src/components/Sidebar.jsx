@@ -131,13 +131,16 @@ const handleLogout =()=>
             isCollapsed?sidebarStyles.footerContainer.collapsed:
             sidebarStyles.footerContainer.expanded
         )}>
-            <Link className={cn(
-                sidebarStyles.footerLink.base,
-                isCollapsed && sidebarStyles.footerLink.collapsed,
-            )} to="">
-                <HelpCircle size={20} className="text-gray-500"/>
-                {!isCollapsed && <span>Support</span>}
-            </Link>
+            <button
+  onClick={() => window.open("https://mehars-portfolio.netlify.app/", "_blank")}
+  className={cn(
+    sidebarStyles.footerLink.base,
+    isCollapsed && sidebarStyles.footerLink.collapsed,
+  )}
+>
+  <HelpCircle size={20} className="text-gray-500"/>
+  {!isCollapsed && <span>Support</span>}
+</button>
 
             <button onClick={handleLogout} className={cn(
                 sidebarStyles.logoutButton.base,
