@@ -12,12 +12,7 @@ const app = express();
 const port = 4000;
 
 //Middlewares
-app.use(cors({
-  origin: 'https://expense-tracker-koushik.netlify.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
-}));
-
+app.use(cors());
 app.use(express.json())
 app.use(express.urlencoded({extended:true}));
 
