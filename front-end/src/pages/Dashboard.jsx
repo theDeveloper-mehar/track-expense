@@ -6,14 +6,12 @@ import {getTimeFrameRange , getPreviousTimeFrameRange , calculateData} from '../
 import axios from 'axios';
 import { useOutletContext } from 'react-router-dom';
 import FinancialCard from '../components/FinancialCard';
-import GuageCard from '../components/GaugeCard'
 import { Legend, Pie, ResponsiveContainer, Tooltip ,Cell} from 'recharts';
 import { PieChart } from 'recharts';
 import AddTransactionModal from '../components/Add';
-import GaugeCard from '../components/GaugeCard';
+import GaugeCard from '../components/GaugeCard'
 
-
-const API_BASE = 'http://localhost:4000/api';
+const API_BASE = `${import.meta.env.VITE_API_URL}/api`;
 
 const getAuthHeader = ()=>
 {

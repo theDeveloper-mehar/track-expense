@@ -7,7 +7,7 @@ import { User, Lock, X, Eye, EyeOff } from 'lucide-react';
 import axios from 'axios';
 
 
-const BASE_URL = "http://localhost:4000/api";
+const BASE_URL = `${import.meta.env.VITE_API_URL}/api`;
 
 Modal.setAppElement('#root');
 const PasswordInput = memo(({ name, label, value, error, showField, onToggle, onChange, disabled }) => (
