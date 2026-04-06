@@ -1,0 +1,16 @@
+import express from 'express';
+import authMiddleware from '../middleware/auth.js';
+import { addExpense, deleteExpense, downloadExpenseExcel, getAllExpenses, getExpenseOverView, updateExpense } from '../controllers/expenseController.js';
+
+const expenseRouter = express.Router();
+
+expenseRouter.post('/add',authMiddleware,addExpense);
+expenseRouter.get('/get',authMiddleware,getAllExpenses);
+
+expenseRouter.put('/update',authMiddleware,updateExpense);
+expenseRouter.get('/downloadexcel',authMiddleware,downloadExpenseExcel);
+
+expenseRouter.delete('/delete/:id',authMiddleware,deleteExpense);
+expenseRouter.get('/overview',authMiddleware,getExpenseOverView);
+
+export default expenseRouter;
